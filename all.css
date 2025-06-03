@@ -1,0 +1,495 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*{
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+body{
+  font-family: "Noto Sans TC";
+  font-weight: 500;
+  line-height: 1.5;
+  background-image: url("../images/HeroSection.png");
+}
+img{
+  width: 100%;  
+  /*應該用 max-width 還是 width 呢? 老師上課說用 max-width，但這邊縮小到只有一欄時圖片不會占滿卡片*/
+}
+.container{
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+.header{
+  display: flex;
+  justify-content: center;
+}
+.navbar{
+  display: flex;
+}
+.nav_item{
+  display: block;
+  padding: 24px 20px;
+  font-size: 28px;
+  text-align: center;
+}
+.banner{
+  display: flex;
+  height: calc(100vh - 90px);
+}
+.banner_img{
+  width: 50%;
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/index/Hero%20Section.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.banner_introduce{
+  width: 50%;
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/index/Hero%20Section2.png);background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.banner_introduce_content{
+  margin-left: 80px;
+  color: #0027D5;
+}
+
+.banner_introduce_content h1{
+  font-size: 120px;
+  font-weight: 900;
+  color: inherit;
+}
+.banner_introduce_content p {
+  font-size: 28px;
+  font-weight: 700;
+  color: inherit;
+}
+/* 992px以下 */
+@media(max-width:992px){
+  .banner{
+    flex-direction: column;
+    height: auto;
+  }
+  .banner_img, .banner_introduce{
+    width: 100%;
+  }
+  .banner_img{
+    height: calc(100vh - 90px - 180px);
+  }
+  .banner_introduce{
+    padding: 24px;
+  }
+  .banner_introduce_content{
+    margin-left: 0;
+  }
+  .banner_introduce_content h1 {
+    font-size: 52px;
+    margin-bottom: 12px;
+  }
+  .banner_introduce_content p {
+
+  }
+}
+
+.new_blog{
+  height: 640px;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 80px;
+  border: 1px solid #6C757D;
+}
+.new_blog_img{
+  width: 50%;
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/blog/About%20Section.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.new_blog_details{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.details_content time{
+  margin-bottom: 4px;
+}
+.hashbox{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.hashtag a{
+  font-size: 24px;
+  color: #0027D5;
+}
+.hash_btn{
+  display: block;
+  padding: 6px 12px;
+  border-radius: 40px;
+  font-weight: 700;
+  background: #0027D5;
+  color: #ffffff;
+}
+.details_content .title{
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.details_content .text{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.details_content .btn{
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid #4B4B4B;
+  border-radius: 40px;
+}
+@media(max-width:992px) {
+  .new_blog{
+    flex-direction: column;
+    gap: 0;
+  }
+  .new_blog_img, .new_blog_details {
+    width: 100%;
+  }
+  .new_blog_img{
+    height: 375px;
+  }
+  .new_blog_details{
+    padding: 48px 12px;
+  }
+}
+/* 搜尋列 */
+.search_bar{
+  display: flex;
+  align-items: center;
+  max-width: 416px;
+  border-radius: 40px;
+  position: relative;
+  margin-bottom: 40px;
+}
+.fa-solid{  /*設定寬高行距想讓icon符合設計稿，作法是可以的嗎?但icon並沒有變大填滿24*24，還是16*16的大小*/
+  display: block;
+  width: 24px;
+  height: 24px;
+  line-height: 1.5;
+  text-align: center;
+  position: absolute;
+  left: 16px;
+}
+.search_input{
+  width: 100%;
+  border: 1px solid #4B4B4B;
+  border-radius: 40px;
+  padding: 16px 48px 16px 50px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* 文章列表 */
+.article_list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px 24px;
+  margin-bottom: 40px;
+}
+.card{
+  width: calc((100% - 24*2px) / 3);
+}
+.card time{
+  margin-bottom: 4px;
+}
+.card .title{
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.card .text{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.card .btn{
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 40px;
+  border: 1px solid #000;
+  text-decoration: none;
+  color: #4B4B4B;
+}
+@media(max-width:992px){
+  .card{
+    width: calc((100% - 24px) / 2);
+  }
+}
+@media(max-width:767px) {
+  .card {
+    width: 100%;
+  }
+}
+
+/* 分頁器 */
+.paginator{
+  display: flex;
+  max-width: 328px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  margin-bottom: 80px;
+}
+.paginator .arrow{
+  display: block;
+  width: 24px;
+  text-align: center;
+}
+.paginator .page_item{
+  display: block;
+  width: 40px;
+  padding: 8px 0;
+  text-align: center;
+}
+.line{
+  height: 2px;
+  background: #6C757D;
+}
+@media(max-width:992px){
+  .paginator {
+    margin-bottom: 64px;
+  }
+}
+
+.pages{
+  max-width: 375px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+}
+.page_link{
+  display: block;
+  width: 40px;
+  padding: 8px 0;
+  text-align: center;
+}
+.pages .active{
+  color: #0027D5;
+  background: #d6e6ff;
+}
+.page_prev, .page_next{
+  width: auto;
+  font-size: 24px;
+}
+.page_prev i, .page_next i{
+  display: flex;
+}
+
+/* 社群 */
+.social{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.social .email{
+  font-size: 32px;
+}
+.social_links{
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+/* 如果社群連結使用的圖片小於44px，這樣是一樣將a設為block調整寬度為44px，再將圖片改用成背景的作法嗎 */
+.social_item{
+  display: block;
+  width: 44px;
+  height: 44px;
+}
+/* .yt{
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/onlyIcon.png?raw=true);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+.tw {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/onlyIcon-1.png?raw=true);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.fb {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/onlyIcon-2.png?raw=true);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.linked {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/icons8-linkedin.png?raw=true);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ig {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/onlyIcon-3.png?raw=true);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media(max-width:992px){
+
+}
+@media(max-width:767px) {
+  .social{
+    display: none;
+  }
+}
+.footer{
+  background: #ffffff;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  text-align: center;
+}
